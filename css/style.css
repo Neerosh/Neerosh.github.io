@@ -4,8 +4,8 @@ html, body{
     background-image: url('../images/home_background.jpg');
     background-repeat: no-repeat; 
     background-attachment: fixed; 
+    background-position: center;
     background-size: cover;
-    overflow: hidden;
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
 }
