@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body{
+    background-image: url('../images/home_background.jpg');
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+}
+.back-opacity-80{
+    background-color: rgba(33, 37, 41,0.8);
+}
+.nav-link{
+    font-weight: 500;
+}
