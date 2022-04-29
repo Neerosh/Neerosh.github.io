@@ -5,7 +5,9 @@ body{
     background-repeat: no-repeat; 
     background-attachment: fixed; 
     background-size: cover;
-    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
 }
