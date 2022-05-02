@@ -2,13 +2,12 @@
 
 
 html, body{
-    height: 100vh;
     background-image: url('../images/home_background.jpg');
     background-color: #303030;
     background-repeat: no-repeat; 
     background-attachment: fixed;
     background-position: center center;
-    /*background-size: cover;*/
+    background-size: cover;
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast;
 }
