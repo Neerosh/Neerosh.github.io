@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
+
 html, body{
-    height: 100%;
     background-image: url('../images/home_background.jpg');
     background-color: #303030;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    background-position: center;
+    background-position: top center;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .back-opacity-80{
