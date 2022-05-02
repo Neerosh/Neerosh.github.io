@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 
-html, body{
+.background{
     background-image: url('../images/home_background.jpg');
     background-color: #303030;
     background-repeat: no-repeat; 
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover;
+    height: 125vh;
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast;
 }
