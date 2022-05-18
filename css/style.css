@@ -2,13 +2,13 @@
 
 
 html, body{
-    background-color: #151515;
+    background-color: rgba(16, 16, 16, 0.8);
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast;
 }
 
-.back-opacity-80{
-    background-color: rgba(33, 37, 41,0.8);
+header{
+    background-color: #000000;
 }
 .nav-link{
     font-weight: 500;
