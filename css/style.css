@@ -2,7 +2,7 @@
 
 
 html, body{
-    background-color: rgba(16, 16, 16, 0.8);
+    background-color: #161616;
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast;
 }
