@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
-
 html, body{
-    background-color: #161616;
+    background-color: #181818;
     -webkit-font-smoothing: antialiased;
     image-rendering: -webkit-optimize-contrast;
 }
 
 header{
-    background-color: #000000;
+    background-color: #212121;
 }
 .nav-link{
     font-weight: 500;
