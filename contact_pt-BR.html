@@ -45,22 +45,23 @@
         </div>
       </nav>
     </header>
-    <div class="container-xxl text-white">
+    <div class="container-xxl p-3 text-white">
       <div class="row justify-content-md-center">
         <div class="col-md-8">
-          <h2 class="text-center mt-4">Entre em Contato</h2>
-          <form class="mb-4" accept-charset="utf-8" action="https://formspree.io/f/mgedpnol" method="post">
-            <div class="input-group mt-3 mb-3">
-              <span class="input-group-text">Nome</span>
-              <input type="text" class="form-control" placeholder="Seu Nome" aria-label="Seu Nome" name="full-name" required>
+          <h2 class="text-center mt-3 mb-5">Entre em Contato</h2>
+          <form class="mb-4 text-black" accept-charset="utf-8" action="https://formspree.io/f/mgedpnol" method="post">
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="Full Name" id="floatingInput" name="full-name" required>
+              <label for="floatingInput">Nome</label>
             </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">Email</span>
-              <input type="email" class="form-control" placeholder="test@example.com" aria-label="test@example.com" name="email" required>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" placeholder="test@example.com" id="floatingInput" name="email" required>
+              <label for="floatingInput">Email</label>
             </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">Mensagem</span>
-              <textarea type="text" class="form-control" aria-label="Mensagem" name="message" rows="6" required></textarea>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" type="text" placeholder="Leave your message here" id="floatingTextarea" name="message" style="height: 100px" required></textarea>
+              <label for="floatingTextarea">Mensagem</label>
             </div>
             <button class="btn btn-primary" type="submit"><i class="bi bi-send me-2"></i>Enviar</button>
           </form>
