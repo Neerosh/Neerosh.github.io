@@ -46,14 +46,14 @@ function createCard(repositories){
         }else{
             dateDiffText = datePushed.toLocaleDateString('pt-BR', options);
             cardHTML =`
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-xl-4">
                 <div class="card text-dark h-100">
                     <div class="card-body d-flex align-items-start flex-column">
                         <h5 class="card-title">${repo.name}</h5>
                         <p class="card-text mb-auto">${description}</p>
                         <a href="${repo.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Repositório</a>
                     </div>
-                    <div class="card-footer text-muted">Ultima Atualização ${dateDiffText}
+                    <div class="card-footer text-muted">Última atualização ${dateDiffText}
                     </div>
                 </div>
             </div>
