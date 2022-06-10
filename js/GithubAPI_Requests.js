@@ -1,4 +1,4 @@
-const main = document.getElementById('main');
+const repoCardRow = document.getElementById('RepoCardRow');
 const userLang = document.documentElement.getAttribute('lang'); 
 
 getRepositories();
@@ -8,7 +8,8 @@ async function getRepositories(){
     const resp = await fetch(ApiUrl);
     const respData = await resp.json();
     //console.log(respData);
-    createCard(respData)
+    createCard(respData);
+    cleanPlaceholderCards();
 }
 
 function createCard(repositories){
@@ -38,7 +39,8 @@ function createCard(repositories){
                         <p class="card-text mb-auto">${description}</p>
                         <a href="${repo.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Repository</a>
                     </div>
-                    <div class="card-footer text-muted">Last updated ${dateDiffText}
+                    <div class="card-footer text-muted">
+                       <small>Last updated ${dateDiffText}</small>
                     </div>
                 </div>
             </div>
@@ -53,13 +55,31 @@ function createCard(repositories){
                         <p class="card-text mb-auto">${description}</p>
                         <a href="${repo.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Repositório</a>
                     </div>
-                    <div class="card-footer text-muted">Última atualização ${dateDiffText}
+                    <div class="card-footer text-muted">
+                        <small>Última atualização ${dateDiffText}</small>
                     </div>
                 </div>
             </div>
             `;
         }
-        main.innerHTML += cardHTML;
+        repoCardRow.innerHTML += cardHTML;
     });
 
+}
+
+function cleanPlaceholderCards(){
+    const placeholder = document.getElementsByName('placeholderCard');
+    //console.log(placeholder.length);
+
+    while (placeholder.length > 0) {
+        var el = placeholder[0];
+        el.parentNode.removeChild(el);
+        //console.log(placeholder.length);
+     }
+
+    //placeholder.forEach((el) => { 
+    //    let placeholdercard = el;
+    //    placeholdercard.remove();
+    //    console.log(placeholdercard.tagName);
+    //  });
 }
