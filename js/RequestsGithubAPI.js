@@ -1,6 +1,5 @@
 const repoCardRow = document.getElementById('RepoCardRow');
 const userLang = document.documentElement.getAttribute('lang'); 
-
 getRepositories();
 
 async function getRepositories(){
