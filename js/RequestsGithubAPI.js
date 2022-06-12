@@ -42,7 +42,7 @@ function createCardRepository(repositories){
                     <div class="card-body d-flex align-items-start flex-column">
                         <h5 class="card-title">${repository.name}</h5>
                         <p class="card-text mb-auto">${description}</p>
-                        <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Repositório</a>
+                        <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repositório</a>
                     </div>
                     <div class="card-footer text-muted">
                         <small>Última atualização em ${dateDiffText}</small>
@@ -61,7 +61,7 @@ function createCardRepository(repositories){
                 <div class="card-body d-flex align-items-start flex-column">
                     <h5 class="card-title">${repository.name}</h5>
                     <p class="card-text mb-auto">${description}</p>
-                    <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Repository</a>
+                    <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repository</a>
                 </div>
                 <div class="card-footer text-muted">
                    <small>Last updated on ${dateDiffText}</small>
@@ -113,7 +113,7 @@ function createCardUser(user){
                         <img src="${user.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${user.name}</h3>
-                            <p class="card-text mb-auto">${bio}</p>
+                            <p class="card-text mb-1">${bio}</p>
                             <a href="${user.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Perfil</a>
                         </div>
                     </div>
@@ -133,7 +133,7 @@ function createCardUser(user){
                     <img src="${user.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${user.name}</h3>
-                        <p class="card-text mb-auto">${bio}</p>
+                        <p class="card-text mb-1">${bio}</p>
                         <a href="${user.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Profile</a>
                     </div>
                 </div>
