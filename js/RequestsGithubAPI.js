@@ -1,6 +1,6 @@
-const rowCardsRepository = document.getElementById('RowCardsRepository');
-const rowCardUser = document.getElementById('RowCardUser');
-const userLang = document.documentElement.getAttribute('lang'); 
+var rowCardsRepository = document.getElementById('RowCardsRepository');
+var rowCardUser = document.getElementById('RowCardUser');
+var userLang = document.documentElement.getAttribute('lang'); 
 getRepositories();
 getUser();
 

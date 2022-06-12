@@ -1,4 +1,4 @@
-const userLang = navigator.language || navigator.userLanguage; 
+var userLang = navigator.language || navigator.userLanguage; 
 
 if (userLang != "pt-BR"){
     document.documentElement.setAttribute("lang", "en-US");
