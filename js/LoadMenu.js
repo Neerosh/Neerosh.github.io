@@ -1,6 +1,9 @@
-const header = document.getElementById('Menu'); 
+var header = document.getElementById('Menu'); 
 var userLang = document.documentElement.getAttribute('lang');
-const page = document.documentURI
+var pageURI = document.documentURI;
+var page = pageURI.substring(pageURI.lastIndexOf('/'));
+
+console.log(page);
 loadMenu();
 markActiveLink();
 
@@ -91,7 +94,7 @@ function loadMenu(){
 }
 
 function markActiveLink(){
-    const activelink = document.getElementsByClassName('nav-link');
+    var activelink = document.getElementsByClassName('nav-link');
     var array = [].slice.call(activelink);
     array.forEach((element) => {
         element.classList.remove('active');
