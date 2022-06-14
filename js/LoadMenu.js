@@ -23,13 +23,13 @@ function loadMenu(){
                                 <i class="bi bi-diamond-half me-1"></i>Projetos
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/project_utilitiesTID_pt-BR">UtilitiesTID</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="/githubUserSearch_pt-BR"><i class="bi bi-github me-1"></i>Pesquisa Usuário Github</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/project_utilitiesTID_pt-BR">UtilitiesTID</a>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/githubUserSearch_pt-BR">
-                                    <i class="bi bi-github me-1"></i>Pesquisa Github
-                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/resume_pt-BR">
@@ -65,14 +65,12 @@ function loadMenu(){
                         </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <li>
+                                    <a class="dropdown-item" href="/githubUserSearch_en-US">Search User Github</a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="/project_utilitiesTID_en-US">UtilitiesTID</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/githubUserSearch_en-US">
-                                <i class="bi bi-github me-1"></i>Search Github
-                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/resume_en-US">
