@@ -2,10 +2,17 @@ var userLang = document.documentElement.getAttribute('lang');
 var rowCardsRepository = document.getElementById('RowCardsRepository');
 var rowCardUser = document.getElementById('RowCardUser');
 var searchButton = document.getElementById('ButtonSearch');
-
-//searchButton.addEventListener('click',clickButtonSearch());
+var usernameInput = document.getElementById('UsernameSearch');
 
 //functions
+usernameInput.addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      searchButton.click();
+    }
+  });
+
 async function clickButtonSearch(){
     cleanRowCardUser();
     cleanRowCardsRepository();
