@@ -10,90 +10,93 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="background-laptop">
-    <header id="Menu">
-      <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-xxl">
-          <a class="navbar-brand">Neerosh Space</a>
-        </div>
-      </nav>
-    </header>
-    <div class="container-xxl p-3 text-white">
-      <div class="row">
-        <div class="col-sm-12 col-md-7 col-lg-6">
-          <div id="carouselUtilitiesTID" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators mb-0">
-              <button type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="min-vh-100 d-flex flex-column justify-content-between">
+      <div name="Wrapper">
+        <header id="Menu">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-xxl">
+              <a class="navbar-brand">Neerosh Space</a>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../images/UtilitiesTID_ManageCode.png" class="rounded w-100" alt="Módulo de Códigos">
-              </div>
-              <div class="carousel-item">
-                <img src="../images/UtilitiesTID_ManageFiles.png" class="rounded w-100" alt="Módulo de Arquivos">
-              </div>
-              <div class="carousel-item">
-                <img src="../images/UtilitiesTID_ManageProcesses.png" class="rounded w-100" alt="Módulo de Processos">
+          </nav>
+        </header>
+        <div class="container-xxl p-3 text-white">
+          <div class="row">
+            <div class="col-sm-12 col-md-7 col-lg-6">
+              <div id="carouselUtilitiesTID" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators mb-0">
+                  <button type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../images/UtilitiesTID_ManageCode.png" class="rounded w-100" alt="Módulo de Códigos">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/UtilitiesTID_ManageFiles.png" class="rounded w-100" alt="Módulo de Arquivos">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/UtilitiesTID_ManageProcesses.png" class="rounded w-100" alt="Módulo de Processos">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselUtilitiesTID" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="col-sm-12 col-md-5 col-lg-6">
+              <h2>Utilities TID</h2>
+              <p class="mb-1">Um conjunto de ferramentas versáteis para uso diário. Aplicação desenvolvida em C# utilizando .NET 6.0 e SQLite.</p>
+              <p class="text-warning fw-bolder">Requer .NET Desktop Runtime 6.0.3 ou SDK 6.0.3</p>
+              <a class="btn btn-primary mt-2" href="https://github.com/Neerosh/UtilitiesTID" role="button"><i class="bi bi-github"></i>Projeto no GitHub</a>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-5 col-lg-6">
-          <h2>Utilities TID</h2>
-          <p class="mb-1">Um conjunto de ferramentas versáteis para uso diário. Aplicação desenvolvida em C# utilizando .NET 6.0 e SQLite.</p>
-          <p class="text-warning fw-bolder">Requer .NET Desktop Runtime 6.0.3 ou SDK 6.0.3</p>
-          <a class="btn btn-primary mt-2" href="https://github.com/Neerosh/UtilitiesTID" role="button"><i class="bi bi-github"></i>Projeto no GitHub</a>
-        </div>
-      </div>
-      <div class="row row-cols-1 mt-2 p-2">
-        <h3 class="border-bottom">Recursos</h3>
-      </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-2">
-        <div class="col">
-          <h4><i class="bi bi-file-earmark-richtext me-1"></i>Arquivos</h4>
-          <p>Inclua, altere ou exclua filtros de arquivos, utilize dos filtros para copiar, mover ou excluir arquivos duplicados. Gere ou valide hashes de arquivos.</p>
-        </div>
-        <div class="col">
-          <h4><i class="bi bi-code-slash me-1"></i>Códigos</h4>
-          <p>Inclua, altere ou exclua trechos repetitivos de código, utilize os códigos cadastrados para rapidamente copiar para a área de transfêrencia.</p>
-        </div>
-        <div class="col">
-          <h4><i class="bi bi-arrow-left-right me-1"></i>Conversor</h4>
-          <p>Converta horários e datas para o formato padrão utilizado pela linguagem Clarion. Descubra o dia da semana de qualquer data em formato Clarion.</p>
-        </div>
-        <div class="col">
-          <h4><i class="bi bi-cpu me-1"></i>Processos</h4>
-          <p>Liste ou pesquise processos, verifique o usuário responsável por cada processo e finalize processo com um clique.</p>
-        </div>
-        <div class="col">
-          <h4><i class="bi bi-file-earmark-lock me-1"></i>Travas</h4>
-          <p>Verifique se arquivos estão em aberto por algum processo ou compartilhamento e descrubra o usuário responsavel pelo processo ou compartilhamento.</p>
-        </div>
-        <div class="col">
-          <h4><i class="bi bi-pen me-1"></i>SQL Scripts</h4>
-          <p>Gere scripts pré-definidos utilizando caminhos especificos da sua máquina.</p>
-        </div>
-        <div class="col">
-          <h4><i class="bi bi-eye me-1"></i>Vigia</h4>
-          <p>Vigie arquivos ou pastas em tempo real, escolha os eventos a serem notificados: alteração de nome, ultimo acesso, etc..</p>
-        </div>
+          <div class="row row-cols-1 mt-2 p-2">
+            <h3 class="border-bottom">Recursos</h3>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-2">
+            <div class="col">
+              <h4><i class="bi bi-file-earmark-richtext me-1"></i>Arquivos</h4>
+              <p>Inclua, altere ou exclua filtros de arquivos, utilize dos filtros para copiar, mover ou excluir arquivos duplicados. Gere ou valide hashes de arquivos.</p>
+            </div>
+            <div class="col">
+              <h4><i class="bi bi-code-slash me-1"></i>Códigos</h4>
+              <p>Inclua, altere ou exclua trechos repetitivos de código, utilize os códigos cadastrados para rapidamente copiar para a área de transfêrencia.</p>
+            </div>
+            <div class="col">
+              <h4><i class="bi bi-arrow-left-right me-1"></i>Conversor</h4>
+              <p>Converta horários e datas para o formato padrão utilizado pela linguagem Clarion. Descubra o dia da semana de qualquer data em formato Clarion.</p>
+            </div>
+            <div class="col">
+              <h4><i class="bi bi-cpu me-1"></i>Processos</h4>
+              <p>Liste ou pesquise processos, verifique o usuário responsável por cada processo e finalize processo com um clique.</p>
+            </div>
+            <div class="col">
+              <h4><i class="bi bi-file-earmark-lock me-1"></i>Travas</h4>
+              <p>Verifique se arquivos estão em aberto por algum processo ou compartilhamento e descrubra o usuário responsavel pelo processo ou compartilhamento.</p>
+            </div>
+            <div class="col">
+              <h4><i class="bi bi-pen me-1"></i>SQL Scripts</h4>
+              <p>Gere scripts pré-definidos utilizando caminhos especificos da sua máquina.</p>
+            </div>
+            <div class="col">
+              <h4><i class="bi bi-eye me-1"></i>Vigia</h4>
+              <p>Vigie arquivos ou pastas em tempo real, escolha os eventos a serem notificados: alteração de nome, ultimo acesso, etc..</p>
+            </div>
+          </div>
+        </div> 
       </div>
       <footer class="d-flex flex-wrap align-items-center pt-3 mt-3 border-top">
         <div class="col-12 d-flex align-items-center justify-content-center">
-          <span class="mb-3 mb-md-0">© 2022 Neerosh</span>
+          <p>© 2022 Neerosh</p>
         </div>
       </footer>
-    </div> 
-
+    </div>
     <script src="../js/LoadMenu.js"></script>
     <script src="../bootstrap/js/bootstrap.bundle.js"></script>
   </body>

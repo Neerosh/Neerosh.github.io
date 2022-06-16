@@ -10,40 +10,44 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="background-laptop">
-    <header id="Menu">
-      <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-xxl">
-          <a class="navbar-brand">Neerosh Space</a>
-        </div>
-      </nav>
-    </header>
-    <div class="container-xxl p-3 text-white">
-      <div class="row justify-content-md-center">
-        <div class="col-md-8">
-          <h2 class="text-center mt-3 mb-5">Contact Me</h2>
-          <form class="mb-4 text-black" accept-charset="utf-8" action="https://formspree.io/f/mgedpnol" method="post">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="Full Name" id="floatingInput" name="full-name" required>
-              <label for="floatingInput">Name</label>
+    <div class="min-vh-100 d-flex flex-column justify-content-between">
+      <div name="Wrapper">
+        <header id="Menu">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-xxl">
+              <a class="navbar-brand">Neerosh Space</a>
             </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" placeholder="test@example.com" id="floatingInput" name="email" required>
-              <label for="floatingInput">Email</label>
+          </nav>
+        </header>
+        <div class="container-xxl p-3 text-white">
+          <div class="row justify-content-md-center">
+            <div class="col-md-8">
+              <h2 class="text-center mt-3 mb-5">Contact Me</h2>
+              <form class="mb-4 text-black" accept-charset="utf-8" action="https://formspree.io/f/mgedpnol" method="post">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" placeholder="Full Name" id="floatingInput" name="full-name" required>
+                  <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" placeholder="test@example.com" id="floatingInput" name="email" required>
+                  <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" type="text" placeholder="Leave your message here" id="floatingTextarea" name="message" style="height: 100px" required></textarea>
+                  <label for="floatingTextarea">Message</label>
+                </div>
+                <button class="btn btn-primary" type="submit"><i class="bi bi-send me-2"></i>Send</button>
+              </form>
             </div>
-            <div class="form-floating mb-3">
-              <textarea class="form-control" type="text" placeholder="Leave your message here" id="floatingTextarea" name="message" style="height: 100px" required></textarea>
-              <label for="floatingTextarea">Message</label>
-            </div>
-            <button class="btn btn-primary" type="submit"><i class="bi bi-send me-2"></i>Send</button>
-          </form>
-        </div>
+          </div>
+        </div>  
       </div>
       <footer class="d-flex flex-wrap align-items-center pt-3 mt-3 border-top">
         <div class="col-12 d-flex align-items-center justify-content-center">
-          <span class="mb-3 mb-md-0">© 2022 Neerosh</span>
+          <p>© 2022 Neerosh</p>
         </div>
       </footer>
-    </div>
+    </div>    
     <script src="../js/LoadMenu.js"></script>
     <script src="../bootstrap/js/bootstrap.bundle.js"></script>
   </body>
