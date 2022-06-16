@@ -36,7 +36,7 @@ footer{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 100vh;
+    /*mmin-height: 100vh;*/
 }
 
 @media (max-device-width : 1180px)
