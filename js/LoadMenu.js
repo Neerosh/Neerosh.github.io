@@ -1,18 +1,17 @@
-var header = document.getElementById('Menu'); 
+var menu = document.getElementById('Menu'); 
 var userLang = document.documentElement.getAttribute('lang');
 var pageURI = document.documentURI;
 var page = pageURI.substring(pageURI.lastIndexOf('/'));
 
-console.log(page);
 loadMenu();
 markActiveLink();
 
 function loadMenu(){
     if (userLang == "pt-BR"){
-        header.innerHTML = `
+        menu.innerHTML = `
             <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container-xxl">
-                    <a class="navbar-brand" href="/pt-BR/home">Neerosh Space</a>
+                    <a class="navbar-brand p-0" href="/pt-BR/home"><img class="website-icon" src="../images/NerroshSpace_LogoBlack.png"/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,10 +49,10 @@ function loadMenu(){
         return;
     }
     
-    header.innerHTML = `
+    menu.innerHTML = `
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-xxl">
-                    <a class="navbar-brand" href="/en-US/home">Neerosh Space</a>
+                    <a class="navbar-brand p-0" href="/en-US/home"><img class="website-icon" src="../images/NerroshSpace_LogoBlack.png"/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
