@@ -23,7 +23,7 @@ function loadMenu(){
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li>
-                                        <a class="dropdown-item" href="/pt-BR/githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
+                                        <a class="dropdown-item" href="/pt-BR/project_githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/pt-BR/project_utilitiesTID"><i class="bi bi-tools me-1"></i>UtilitiesTID</a>
@@ -64,7 +64,7 @@ function loadMenu(){
                         </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <li>
-                                    <a class="dropdown-item" href="/en-US/githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
+                                    <a class="dropdown-item" href="/en-US/project_githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/en-US/project_utilitiesTID"><i class="bi bi-tools me-1"></i>UtilitiesTID</a>
