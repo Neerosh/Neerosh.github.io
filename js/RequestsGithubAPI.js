@@ -7,9 +7,9 @@ getUser();
 
 //functions
 async function getRepositories(){
-    const request = 'https://api.github.com/users/Neerosh/repos'
-    const response = await fetch(request);
-    const repositoriesJSON = await response.json();
+    var request = 'https://api.github.com/users/Neerosh/repos'
+    var response = await fetch(request);
+    var repositoriesJSON = await response.json();
     //console.log(respData);
     if (repositoriesJSON != undefined && repositoriesJSON != null){
         createCardRepository(repositoriesJSON);
@@ -19,13 +19,13 @@ async function getRepositories(){
 function createCardRepository(repositories){
     var array = [].slice.call(repositories);
     array.sort(function(a, b){
-        const date1 = new Date(a.pushed_at)
-        const date2 = new Date(b.pushed_at)
+        var date1 = new Date(a.pushed_at)
+        var date2 = new Date(b.pushed_at)
         //order dates recent to older
         return date2 - date1;
     }).forEach((repository) => {
-        const datePushed = new Date (`${repository.pushed_at}`);
-        const options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+        var datePushed = new Date (`${repository.pushed_at}`);
+        var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
         let dateDiffText = '';
         let description = '';
         let cardHTML = '';
@@ -74,7 +74,7 @@ function createCardRepository(repositories){
 
 }
 function cleanPlaceholderCardsRepository(){
-    const placeholder = document.getElementsByName('placeholderCardsRepository');
+    var placeholder = document.getElementsByName('placeholderCardsRepository');
 
     while (placeholder.length > 0) {
         var el = placeholder[0];
@@ -83,9 +83,9 @@ function cleanPlaceholderCardsRepository(){
 }
 
 async function getUser(){
-    const request = 'https://api.github.com/users/Neerosh'
-    const response = await fetch(request);
-    const userJSON = await response.json();
+    var request = 'https://api.github.com/users/Neerosh'
+    var response = await fetch(request);
+    var userJSON = await response.json();
     //console.log(respData);
     if (userJSON != undefined && userJSON != null){
         createCardUser(userJSON);
@@ -93,11 +93,10 @@ async function getUser(){
     }
 }
 function createCardUser(user){
-    //const lastUpdatedDate = new Date(user.updated_at);
-    //const options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
-    let bio = '';
-    let lasUpdatedDateText = '';
-    let cardHTML = '';
+    //var lastUpdatedDate = new Date(user.updated_at);
+    //var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+    var bio = '';
+    var cardHTML = '';
 
     if (user.bio != null){
         bio = user.bio;
@@ -143,7 +142,7 @@ function createCardUser(user){
     rowCardUser.innerHTML += cardHTML;
 }
 function cleanPlaceholderCardUser(){
-    const placeholder = document.getElementsByName('placeholderCardUser');
+    var placeholder = document.getElementsByName('placeholderCardUser');
 
     while (placeholder.length > 0) {
         var el = placeholder[0];

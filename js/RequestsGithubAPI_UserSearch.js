@@ -21,7 +21,7 @@ async function clickButtonSearch(){
     createPlaceholderCardsRepository();
 
     let username = document.getElementById('UsernameSearch').value;
-    const user = await getUser(username);
+    var user = await getUser(username);
     if (user == undefined){
         cleanRowCardUser();
         cleanRowCardsRepository();
@@ -32,7 +32,7 @@ async function clickButtonSearch(){
     createCardUser(user);
     cleanPlaceholderCardUser();
 
-    const repositories = await getRepositories(username);
+    var repositories = await getRepositories(username);
     if (repositories == undefined){
         cleanRowCardUser();
         cleanRowCardsRepository();
@@ -68,7 +68,7 @@ function createPlaceholderCardUser(){
 }
 function createPlaceholderCardsRepository(){
     rowCardsRepository.removeAttribute('hidden');
-    let placeholderCard = `
+    var placeholderCard = `
     <div class="col-md-6 col-lg-4" name="placeholderCardsRepository">
         <div class="card text-dark h-100">
             <div class="card-body">
@@ -93,9 +93,9 @@ function createPlaceholderCardsRepository(){
 }
 
 async function getRepositories(username){
-    const request = 'https://api.github.com/users/'+username+'/repos'
-    const response = await fetch(request);
-    const repositoriesJSON = await response.json();
+    var request = 'https://api.github.com/users/'+username+'/repos'
+    var response = await fetch(request);
+    var repositoriesJSON = await response.json();
     if (repositoriesJSON == undefined || repositoriesJSON == null){
         return undefined;
     }
@@ -109,16 +109,16 @@ async function getRepositories(username){
 function createCardRepository(repositoriesJSON){
     var array = [].slice.call(repositoriesJSON);
     array.sort(function(a, b){
-        const date1 = new Date(a.pushed_at)
-        const date2 = new Date(b.pushed_at)
+        var date1 = new Date(a.pushed_at)
+        var date2 = new Date(b.pushed_at)
         //order dates recent to older
         return date2 - date1;
     }).forEach((repository) => {
-        const datePushed = new Date (repository.pushed_at);
-        const options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
-        let dateDiffText = '';
-        let description = '';
-        let cardHTML = '';
+        var datePushed = new Date (repository.pushed_at);
+        var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+        var dateDiffText = '';
+        var description = '';
+        var cardHTML = '';
 
         if (repository.description != null){
             description = repository.description;
@@ -138,8 +138,7 @@ function createCardRepository(repositoriesJSON){
                         <small>Última atualização em ${dateDiffText}</small>
                     </div>
                 </div>
-            </div>
-            `;
+            </div>`;
             rowCardsRepository.innerHTML += cardHTML;
             return;
         }
@@ -157,14 +156,13 @@ function createCardRepository(repositoriesJSON){
                    <small>Last updated on ${dateDiffText}</small>
                 </div>
             </div>
-        </div>
-        `;
+        </div>`;
         rowCardsRepository.innerHTML += cardHTML;
     });
 
 }
 function cleanPlaceholderCardsRepository(){
-    const placeholder = document.getElementsByName('placeholderCardsRepository');
+    var placeholder = document.getElementsByName('placeholderCardsRepository');
 
     while (placeholder.length > 0) {
         var el = placeholder[0];
@@ -176,9 +174,9 @@ function cleanRowCardsRepository(){
 }
 
 async function getUser(username){
-    const request = 'https://api.github.com/users/'+username
-    const response = await fetch(request);
-    const userJSON = await response.json();
+    var request = 'https://api.github.com/users/'+username
+    var response = await fetch(request);
+    var userJSON = await response.json();
     if (userJSON == undefined || userJSON == null || userJSON.name == undefined){
         return undefined;
     }
@@ -190,11 +188,10 @@ async function getUser(username){
     }*/
 }
 function createCardUser(userJSON){
-    //const lastUpdatedDate = new Date(userJSON.updated_at);
-    //const options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
-    let bio = '';
-    let lasUpdatedDateText = '';
-    let cardHTML = '';
+    //var lastUpdatedDate = new Date(userJSON.updated_at);
+    //var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+    var bio = '';
+    var cardHTML = '';
 
     if (userJSON.bio != null){
         bio = userJSON.bio;
@@ -240,7 +237,7 @@ function createCardUser(userJSON){
     rowCardUser.innerHTML += cardHTML;
 }
 function cleanPlaceholderCardUser(){
-    const placeholder = document.getElementsByName('placeholderCardUser');
+    var placeholder = document.getElementsByName('placeholderCardUser');
 
     while (placeholder.length > 0) {
         var el = placeholder[0];

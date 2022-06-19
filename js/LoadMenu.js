@@ -45,7 +45,7 @@ function loadMenu(){
                         </ul>
                     </div>
                 </div>
-            </nav>`
+            </nav>`;
         return;
     }
     
@@ -86,7 +86,7 @@ function loadMenu(){
                     </ul>
                 </div>
             </div>
-        </nav>`
+        </nav>`;
 
 }
 
