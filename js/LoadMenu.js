@@ -1,26 +1,23 @@
 const menu = document.getElementById('Menu'); 
 const userLang = document.documentElement.getAttribute('lang');
+const indexText = document.getElementById("selectionText");
 const pageURI = document.documentURI;
-let page = pageURI.substring(pageURI.lastIndexOf('/'));
+const clientLang = navigator.language || navigator.userLanguage; 
 
-if (page.endsWith('.html')){
-    page = page.substring(1,page.lastIndexOf('.'));
-}
 
 loadMenu();
-markActiveLink();
-
-if (page == 'index' || page =='/'){
-    loadIndexText();
-}
-
+loadIndexText();
 
 function loadMenu(){
-    let imageSRC ='../images/NerroshSpace_LogoBlack.png';
-    if(page == 'index'){
-        imageSRC = 'images/NerroshSpace_LogoBlack.png';
+    let imageSRC = 'images/NerroshSpace_LogoBlack.png';
+    let menuLang = clientLang;
+    
+    if (indexText == null || indexText == undefined) {
+        imageSRC ='../images/NerroshSpace_LogoBlack.png';
+        menuLang = userLang;
     }
-    if (userLang == "pt-BR"){
+
+    if (menuLang == "pt-BR"){
         menu.innerHTML = `
             <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container-xxl">
@@ -103,26 +100,16 @@ function loadMenu(){
 
 }
 
-function markActiveLink(){
-    let activelink = document.getElementsByClassName('nav-link');
-    let array = [].slice.call(activelink);
-    array.forEach((element) => {
-        element.classList.remove('active');
-        if (element.getAttribute('href') == page){
-            element.classList.add('active');
-        }
-    });
-}
-
 function loadIndexText(){
-    if (userLang != "pt-BR"){
+    if (indexText == null || indexText == undefined) { return; }
+    if (clientLang != "pt-BR"){
         document.documentElement.setAttribute("lang", "en-US");
-        document.getElementById("selectionText").textContent = "Select Your Language:";
+        indexText.textContent = "Select Your Language:";
         document.getElementById("englishButton").textContent = "English (en-US)"
         document.getElementById("portugueseButton").textContent = "Portuguese (pt-BR)";
     }else{
         document.documentElement.setAttribute("lang", "pt-BR");
-        document.getElementById("selectionText").textContent = "Selecione Sua Linguagem:";
+        indexText.textContent = "Selecione Sua Linguagem:";
         document.getElementById("englishButton").textContent = "Inglês (en-US)"
         document.getElementById("portugueseButton").textContent = "Português (pt-BR)";
     }

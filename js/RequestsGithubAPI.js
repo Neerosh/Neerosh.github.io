@@ -23,7 +23,7 @@ function createCardRepository(repositories){
         //order dates recent to older
         return date2 - date1;
     }).forEach((repository) => {
-        let datePushed = new Date (`${repository.pushed_at}`);
+        let datePushed = new Date (repository.pushed_at);
         let options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
         let dateDiffText = '';
         let description = '';
