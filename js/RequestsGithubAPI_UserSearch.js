@@ -1,8 +1,8 @@
-var userLang = document.documentElement.getAttribute('lang');
-var rowCardsRepository = document.getElementById('RowCardsRepository');
-var rowCardUser = document.getElementById('RowCardUser');
-var searchButton = document.getElementById('ButtonSearch');
-var usernameInput = document.getElementById('UsernameSearch');
+//let userLang = document.documentElement.getAttribute('lang');
+const rowCardsRepository = document.getElementById('RowCardsRepository');
+const rowCardUser = document.getElementById('RowCardUser');
+const searchButton = document.getElementById('ButtonSearch');
+const usernameInput = document.getElementById('UsernameSearch');
 
 //functions
 usernameInput.addEventListener('keypress', function(event) {
@@ -21,7 +21,7 @@ async function clickButtonSearch(){
     createPlaceholderCardsRepository();
 
     let username = document.getElementById('UsernameSearch').value;
-    var user = await getUser(username);
+    const user = await getUser(username);
     if (user == undefined){
         cleanRowCardUser();
         cleanRowCardsRepository();
@@ -32,7 +32,7 @@ async function clickButtonSearch(){
     createCardUser(user);
     cleanPlaceholderCardUser();
 
-    var repositories = await getRepositories(username);
+    const repositories = await getRepositories(username);
     if (repositories == undefined){
         cleanRowCardUser();
         cleanRowCardsRepository();
@@ -68,7 +68,7 @@ function createPlaceholderCardUser(){
 }
 function createPlaceholderCardsRepository(){
     rowCardsRepository.removeAttribute('hidden');
-    var placeholderCard = `
+    let placeholderCard = `
     <div class="col-md-6 col-lg-4" name="placeholderCardsRepository">
         <div class="card text-dark h-100">
             <div class="card-body">
@@ -93,9 +93,9 @@ function createPlaceholderCardsRepository(){
 }
 
 async function getRepositories(username){
-    var request = 'https://api.github.com/users/'+username+'/repos'
-    var response = await fetch(request);
-    var repositoriesJSON = await response.json();
+    const request = 'https://api.github.com/users/'+username+'/repos'
+    const response = await fetch(request);
+    const repositoriesJSON = await response.json();
     if (repositoriesJSON == undefined || repositoriesJSON == null){
         return undefined;
     }
@@ -109,16 +109,16 @@ async function getRepositories(username){
 function createCardRepository(repositoriesJSON){
     var array = [].slice.call(repositoriesJSON);
     array.sort(function(a, b){
-        var date1 = new Date(a.pushed_at)
-        var date2 = new Date(b.pushed_at)
+        let date1 = new Date(a.pushed_at)
+        let date2 = new Date(b.pushed_at)
         //order dates recent to older
         return date2 - date1;
     }).forEach((repository) => {
-        var datePushed = new Date (repository.pushed_at);
-        var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
-        var dateDiffText = '';
-        var description = '';
-        var cardHTML = '';
+        let datePushed = new Date (repository.pushed_at);
+        let options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+        let dateDiffText = '';
+        let description = '';
+        let cardHTML = '';
 
         if (repository.description != null){
             description = repository.description;
@@ -162,10 +162,10 @@ function createCardRepository(repositoriesJSON){
 
 }
 function cleanPlaceholderCardsRepository(){
-    var placeholder = document.getElementsByName('placeholderCardsRepository');
+    const placeholder = document.getElementsByName('placeholderCardsRepository');
 
     while (placeholder.length > 0) {
-        var el = placeholder[0];
+        let el = placeholder[0];
         el.parentNode.removeChild(el);
      }
 }
@@ -174,9 +174,9 @@ function cleanRowCardsRepository(){
 }
 
 async function getUser(username){
-    var request = 'https://api.github.com/users/'+username
-    var response = await fetch(request);
-    var userJSON = await response.json();
+    const request = 'https://api.github.com/users/'+username
+    const response = await fetch(request);
+    const userJSON = await response.json();
     if (userJSON == undefined || userJSON == null || userJSON.name == undefined){
         return undefined;
     }
@@ -188,10 +188,10 @@ async function getUser(username){
     }*/
 }
 function createCardUser(userJSON){
-    //var lastUpdatedDate = new Date(userJSON.updated_at);
-    //var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
-    var bio = '';
-    var cardHTML = '';
+    //let lastUpdatedDate = new Date(userJSON.updated_at);
+    //let options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+    let bio = '';
+    let cardHTML = '';
 
     if (userJSON.bio != null){
         bio = userJSON.bio;
@@ -237,10 +237,10 @@ function createCardUser(userJSON){
     rowCardUser.innerHTML += cardHTML;
 }
 function cleanPlaceholderCardUser(){
-    var placeholder = document.getElementsByName('placeholderCardUser');
+    let placeholder = document.getElementsByName('placeholderCardUser');
 
     while (placeholder.length > 0) {
-        var el = placeholder[0];
+        let el = placeholder[0];
         el.parentNode.removeChild(el);
     }
 }

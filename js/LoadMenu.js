@@ -1,17 +1,32 @@
-var menu = document.getElementById('Menu'); 
-var userLang = document.documentElement.getAttribute('lang');
-var pageURI = document.documentURI;
-var page = pageURI.substring(pageURI.lastIndexOf('/'));
+const menu = document.getElementById('Menu'); 
+const userLang = document.documentElement.getAttribute('lang');
+const pageURI = document.documentURI;
+let page = pageURI.substring(pageURI.lastIndexOf('/'));
+
+if (page.endsWith('.html')){
+    page = page.substring(1,page.lastIndexOf('.'));
+}
+
+console.log(page);
 
 loadMenu();
 markActiveLink();
 
+if (page == 'index'){
+    loadIndexText();
+}
+
+
 function loadMenu(){
+    let imageSRC ='../images/NerroshSpace_LogoBlack.png';
+    if(page == 'index'){
+        imageSRC = 'images/NerroshSpace_LogoBlack.png';
+    }
     if (userLang == "pt-BR"){
         menu.innerHTML = `
             <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container-xxl">
-                    <a class="navbar-brand p-0" href="/pt-BR/home"><img class="website-icon" src="../images/NerroshSpace_LogoBlack.png"/></a>
+                    <a class="navbar-brand p-0" href="/pt-BR/home"><img class="website-icon" src="${imageSRC}"/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -52,7 +67,7 @@ function loadMenu(){
     menu.innerHTML = `
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-xxl">
-                    <a class="navbar-brand p-0" href="/en-US/home"><img class="website-icon" src="../images/NerroshSpace_LogoBlack.png"/></a>
+                    <a class="navbar-brand p-0" href="/en-US/home"><img class="website-icon" src="${imageSRC}"/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -91,12 +106,26 @@ function loadMenu(){
 }
 
 function markActiveLink(){
-    var activelink = document.getElementsByClassName('nav-link');
-    var array = [].slice.call(activelink);
+    let activelink = document.getElementsByClassName('nav-link');
+    let array = [].slice.call(activelink);
     array.forEach((element) => {
         element.classList.remove('active');
         if (element.getAttribute('href') == page){
             element.classList.add('active');
         }
     });
+}
+
+function loadIndexText(){
+    if (userLang != "pt-BR"){
+        document.documentElement.setAttribute("lang", "en-US");
+        document.getElementById("selectionText").textContent = "Select Your Language:";
+        document.getElementById("englishButton").textContent = "English (en-US)"
+        document.getElementById("portugueseButton").textContent = "Portuguese (pt-BR)";
+    }else{
+        document.documentElement.setAttribute("lang", "pt-BR");
+        document.getElementById("selectionText").textContent = "Selecione Sua Linguagem:";
+        document.getElementById("englishButton").textContent = "Inglês (en-US)"
+        document.getElementById("portugueseButton").textContent = "Português (pt-BR)";
+    }
 }

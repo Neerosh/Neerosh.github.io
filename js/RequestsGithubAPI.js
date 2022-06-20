@@ -1,15 +1,14 @@
-var rowCardsRepository = document.getElementById('RowCardsRepository');
-var rowCardUser = document.getElementById('RowCardUser');
-var userLang = document.documentElement.getAttribute('lang'); 
+const rowCardsRepository = document.getElementById('RowCardsRepository');
+const rowCardUser = document.getElementById('RowCardUser');
 getRepositories();
 getUser();
 
 
 //functions
 async function getRepositories(){
-    var request = 'https://api.github.com/users/Neerosh/repos'
-    var response = await fetch(request);
-    var repositoriesJSON = await response.json();
+    const request = 'https://api.github.com/users/Neerosh/repos'
+    const response = await fetch(request);
+    const repositoriesJSON = await response.json();
     //console.log(respData);
     if (repositoriesJSON != undefined && repositoriesJSON != null){
         createCardRepository(repositoriesJSON);
@@ -17,15 +16,15 @@ async function getRepositories(){
     }
 }
 function createCardRepository(repositories){
-    var array = [].slice.call(repositories);
+    let array = [].slice.call(repositories);
     array.sort(function(a, b){
-        var date1 = new Date(a.pushed_at)
-        var date2 = new Date(b.pushed_at)
+        let date1 = new Date(a.pushed_at)
+        let date2 = new Date(b.pushed_at)
         //order dates recent to older
         return date2 - date1;
     }).forEach((repository) => {
-        var datePushed = new Date (`${repository.pushed_at}`);
-        var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+        let datePushed = new Date (`${repository.pushed_at}`);
+        let options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
         let dateDiffText = '';
         let description = '';
         let cardHTML = '';
@@ -74,18 +73,18 @@ function createCardRepository(repositories){
 
 }
 function cleanPlaceholderCardsRepository(){
-    var placeholder = document.getElementsByName('placeholderCardsRepository');
+    let placeholder = document.getElementsByName('placeholderCardsRepository');
 
     while (placeholder.length > 0) {
-        var el = placeholder[0];
+        let el = placeholder[0];
         el.parentNode.removeChild(el);
      }
 }
 
 async function getUser(){
-    var request = 'https://api.github.com/users/Neerosh'
-    var response = await fetch(request);
-    var userJSON = await response.json();
+    const request = 'https://api.github.com/users/Neerosh'
+    const response = await fetch(request);
+    const userJSON = await response.json();
     //console.log(respData);
     if (userJSON != undefined && userJSON != null){
         createCardUser(userJSON);
@@ -93,10 +92,10 @@ async function getUser(){
     }
 }
 function createCardUser(user){
-    //var lastUpdatedDate = new Date(user.updated_at);
-    //var options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
-    var bio = '';
-    var cardHTML = '';
+    //let lastUpdatedDate = new Date(user.updated_at);
+    //let options = { day:"numeric", year:"numeric", month:"short", hour:"numeric",minute:"numeric"};
+    let bio = '';
+    let cardHTML = '';
 
     if (user.bio != null){
         bio = user.bio;
@@ -142,10 +141,10 @@ function createCardUser(user){
     rowCardUser.innerHTML += cardHTML;
 }
 function cleanPlaceholderCardUser(){
-    var placeholder = document.getElementsByName('placeholderCardUser');
+    let placeholder = document.getElementsByName('placeholderCardUser');
 
     while (placeholder.length > 0) {
-        var el = placeholder[0];
+        let el = placeholder[0];
         el.parentNode.removeChild(el);
     }
 }
