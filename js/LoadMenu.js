@@ -7,12 +7,10 @@ if (page.endsWith('.html')){
     page = page.substring(1,page.lastIndexOf('.'));
 }
 
-console.log(page);
-
 loadMenu();
 markActiveLink();
 
-if (page == 'index'){
+if (page == 'index' || page =='/'){
     loadIndexText();
 }
 
