@@ -33,10 +33,10 @@ function loadMenu(){
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li>
-                                        <a class="dropdown-item" href="/pt-BR/project_githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
+                                        <a class="dropdown-item" href="/pt-BR/projects/githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/pt-BR/project_utilitiesTID"><i class="bi bi-tools me-1"></i>UtilitiesTID</a>
+                                        <a class="dropdown-item" href="/pt-BR/projects/utilitiesTID"><i class="bi bi-tools me-1"></i>UtilitiesTID</a>
                                     </li>
                                 </ul>
                             </li>
@@ -74,10 +74,10 @@ function loadMenu(){
                         </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <li>
-                                    <a class="dropdown-item" href="/en-US/project_githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
+                                    <a class="dropdown-item" href="/en-US/projects/githubUserSearch"><i class="bi bi-github me-1"></i>GithubUserSearch</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/en-US/project_utilitiesTID"><i class="bi bi-tools me-1"></i>UtilitiesTID</a>
+                                    <a class="dropdown-item" href="/en-US/projects/utilitiesTID"><i class="bi bi-tools me-1"></i>UtilitiesTID</a>
                                 </li>
                             </ul>
                         </li>
