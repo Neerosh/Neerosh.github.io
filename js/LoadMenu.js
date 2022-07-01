@@ -17,6 +17,10 @@ function loadMenu(){
         menuLang = userLang;
     }
 
+    if (pageURI.includes('projects')){
+        imageSRC ='../../images/NerroshSpace_LogoBlack.png';
+    }
+
     if (menuLang == "pt-BR"){
         menu.innerHTML = `
             <nav class="navbar navbar-expand-md navbar-dark">
