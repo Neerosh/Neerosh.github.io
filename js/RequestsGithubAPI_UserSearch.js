@@ -47,7 +47,7 @@ function createPlaceholderCardUser(){
     rowCardUser.removeAttribute('hidden');
     rowCardUser.innerHTML = `
     <div class="col-md-8 mx-auto" name="placeholderCardUser">
-        <div class="card text-bg-dark border-light h-100">
+        <div class="card text-bg-dark default-default-border h-100">
             <div class="card-body">
                 <div class="d-flex align-items-start justify-content-left">
                     <img class="col-3 col-md-2 me-3 user-profile">
@@ -201,7 +201,7 @@ function createCardUser(userJSON){
         //lasUpdatedDateText = lastUpdatedDate.toLocaleDateString('pt-BR', options);
         cardHTML =
         `<div class="col-md-8 mx-auto">
-            <div class="card text-bg-dark border-light h-100">
+            <div class="card text-bg-dark default-default-border h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-start justify-content-left">
                         <img src="${userJSON.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
@@ -221,7 +221,7 @@ function createCardUser(userJSON){
     //lasUpdatedDateText = lastUpdatedDate.toLocaleDateString('en-US', options);
     cardHTML =
     `<div class="col-md-8 mx-auto">
-        <div class="card text-bg-dark border-light h-100">
+        <div class="card text-bg-dark default-border h-100">
             <div class="card-body">
                 <div class="d-flex align-items-start justify-content-left">
                     <img src="${userJSON.avatar_url}" class="col-3 col-md-2 me-3 user-profile">

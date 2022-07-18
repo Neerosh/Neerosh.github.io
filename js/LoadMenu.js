@@ -24,7 +24,7 @@ function loadMenu(){
     if (menuLang == "pt-BR"){
         menu.innerHTML = `
             <nav class="navbar navbar-expand-md navbar-dark">
-                <div class="container-xxl">
+                <div class="container-fluid">
                     <a class="navbar-brand p-0" href="/pt-BR/home"><img class="website-icon" src="${imageSRC}"/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,7 @@ function loadMenu(){
     
     menu.innerHTML = `
         <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-xxl">
+            <div class="container-fluid">
                     <a class="navbar-brand p-0" href="/en-US/home"><img class="website-icon" src="${imageSRC}"/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
