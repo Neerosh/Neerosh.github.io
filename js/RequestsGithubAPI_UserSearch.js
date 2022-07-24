@@ -47,9 +47,9 @@ function createPlaceholderCardUser(){
     rowCardUser.removeAttribute('hidden');
     rowCardUser.innerHTML = `
     <div class="col-md-8 mx-auto" name="placeholderCardUser">
-        <div class="card text-bg-dark default-default-border h-100">
+        <div class="card custom-card-dark h-100">
             <div class="card-body">
-                <div class="d-flex align-items-start justify-content-left">
+                <div class="d-flex align-items-between justify-content-left">
                     <img class="col-3 col-md-2 me-3 user-profile">
                     <div class="w-100">
                         <h3 class="card-title placeholder-glow">
@@ -70,8 +70,8 @@ function createPlaceholderCardsRepository(){
     rowCardsRepository.removeAttribute('hidden');
     let placeholderCard = `
     <div class="col-md-6 col-lg-4" name="placeholderCardsRepository">
-        <div class="card text-dark h-100">
-            <div class="card-body">
+        <div class="card custom-card-dark h-100">
+            <div class="card-body d-flex align-items-between flex-column">
                 <h5 class="card-title placeholder-glow">
                 <span class="placeholder col-6"></span>
                 </h5>
@@ -128,13 +128,13 @@ function createCardRepository(repositoriesJSON){
             dateDiffText = datePushed.toLocaleDateString('pt-BR', options);
             cardHTML =`
             <div class="col-md-6 col-xl-4">
-                <div class="card text-dark h-100">
-                    <div class="card-body d-flex align-items-start flex-column">
+                <div class="card custom-card-dark h-100">
+                    <div class="card-body d-flex align-items-between flex-column">
                         <h5 class="card-title">${repository.name}</h5>
                         <p class="card-text mb-auto">${description}</p>
                         <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repositório</a>
                     </div>
-                    <div class="card-footer text-muted">
+                    <div class="card-footer custom-card-dark">
                         <small>Última atualização em ${dateDiffText}</small>
                     </div>
                 </div>
@@ -146,13 +146,13 @@ function createCardRepository(repositoriesJSON){
         dateDiffText = datePushed.toLocaleDateString('en-US', options);
         cardHTML =`
         <div class="col-md-6 col-lg-4">
-            <div class="card text-dark h-100">
-                <div class="card-body d-flex align-items-start flex-column">
+            <div class="card custom-card-dark h-100">
+                <div class="card-body d-flex align-items-between flex-column">
                     <h5 class="card-title">${repository.name}</h5>
                     <p class="card-text mb-auto">${description}</p>
                     <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repository</a>
                 </div>
-                <div class="card-footer text-muted">
+                <div class="card-footer custom-card-dark">
                    <small>Last updated on ${dateDiffText}</small>
                 </div>
             </div>
@@ -201,9 +201,9 @@ function createCardUser(userJSON){
         //lasUpdatedDateText = lastUpdatedDate.toLocaleDateString('pt-BR', options);
         cardHTML =
         `<div class="col-md-8 mx-auto">
-            <div class="card text-bg-dark default-default-border h-100">
+            <div class="card custom-card-dark h-100">
                 <div class="card-body">
-                    <div class="d-flex align-items-start justify-content-left">
+                    <div class="d-flex align-items-between justify-content-left">
                         <img src="${userJSON.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${userJSON.name}</h3>
@@ -221,9 +221,9 @@ function createCardUser(userJSON){
     //lasUpdatedDateText = lastUpdatedDate.toLocaleDateString('en-US', options);
     cardHTML =
     `<div class="col-md-8 mx-auto">
-        <div class="card text-bg-dark default-border h-100">
+        <div class="card custom-card-dark h-100">
             <div class="card-body">
-                <div class="d-flex align-items-start justify-content-left">
+                <div class="d-flex align-items-between justify-content-left">
                     <img src="${userJSON.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${userJSON.name}</h3>

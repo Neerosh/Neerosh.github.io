@@ -20,8 +20,9 @@ footer{
     font-weight: 500;
 }
 
-.default-border{
-    border-color: #4b4b4b;
+.custom-card-dark{
+    border-color: #9b9b9b;
+    background-color: #000000bb;
 }
 
 .no-bullets {

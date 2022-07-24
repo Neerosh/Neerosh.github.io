@@ -37,13 +37,13 @@ function createCardRepository(repositories){
             dateDiffText = datePushed.toLocaleDateString('pt-BR', options);
             cardHTML =`
             <div class="col-md-6 col-xl-4">
-                <div class="card text-dark h-100">
-                    <div class="card-body d-flex align-items-start flex-column">
+                <div class="card custom-card-dark h-100">
+                    <div class="card-body d-flex align-items-between flex-column">
                         <h5 class="card-title">${repository.name}</h5>
                         <p class="card-text mb-auto">${description}</p>
                         <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repositório</a>
                     </div>
-                    <div class="card-footer text-muted">
+                    <div class="card-footer custom-card-dark">
                         <small>Última atualização em ${dateDiffText}</small>
                     </div>
                 </div>
@@ -56,13 +56,13 @@ function createCardRepository(repositories){
         dateDiffText = datePushed.toLocaleDateString('en-US', options);
         cardHTML =`
         <div class="col-md-6 col-lg-4">
-            <div class="card text-dark h-100">
-                <div class="card-body d-flex align-items-start flex-column">
+            <div class="card custom-card-dark h-100">
+                <div class="card-body d-flex align-items-between flex-column">
                     <h5 class="card-title">${repository.name}</h5>
                     <p class="card-text mb-auto">${description}</p>
                     <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repository</a>
                 </div>
-                <div class="card-footer text-muted">
+                <div class="card-footer custom-card-dark">
                    <small>Last updated on ${dateDiffText}</small>
                 </div>
             </div>
@@ -105,9 +105,9 @@ function createCardUser(user){
         //lasUpdatedDateText = lastUpdatedDate.toLocaleDateString('pt-BR', options);
         cardHTML =
         `<div class="col-md-8 mx-auto">
-            <div class="card text-bg-dark default-border h-100">
+            <div class="card custom-card-dark h-100">
                 <div class="card-body">
-                    <div class="d-flex align-items-start justify-content-left">
+                    <div class="d-flex align-items-between justify-content-left">
                         <img src="${user.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${user.name}</h3>
@@ -125,9 +125,9 @@ function createCardUser(user){
     //lasUpdatedDateText = lastUpdatedDate.toLocaleDateString('en-US', options);
     cardHTML =
     `<div class="col-md-8 mx-auto">
-        <div class="card text-bg-dark default-border h-100">
+        <div class="card custom-card-dark h-100">
             <div class="card-body">
-                <div class="d-flex align-items-start justify-content-left">
+                <div class="d-flex align-items-between justify-content-left">
                     <img src="${user.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${user.name}</h3>
