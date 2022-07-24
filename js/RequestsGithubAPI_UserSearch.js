@@ -50,7 +50,7 @@ function createPlaceholderCardUser(){
         <div class="card custom-card-dark h-100">
             <div class="card-body">
                 <div class="d-flex align-items-between justify-content-left">
-                    <img class="col-3 col-md-2 me-3 user-profile">
+                    <img class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
                     <div class="w-100">
                         <h3 class="card-title placeholder-glow">
                         <span class="placeholder col-8"></span>
@@ -204,7 +204,7 @@ function createCardUser(userJSON){
             <div class="card custom-card-dark h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-between justify-content-left">
-                        <img src="${userJSON.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
+                        <img src="${userJSON.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${userJSON.name}</h3>
                             <p class="card-text mb-1">${bio}</p>
@@ -224,7 +224,7 @@ function createCardUser(userJSON){
         <div class="card custom-card-dark h-100">
             <div class="card-body">
                 <div class="d-flex align-items-between justify-content-left">
-                    <img src="${userJSON.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
+                    <img src="${userJSON.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${userJSON.name}</h3>
                         <p class="card-text mb-1">${bio}</p>

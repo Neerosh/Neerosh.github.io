@@ -108,7 +108,7 @@ function createCardUser(user){
             <div class="card custom-card-dark h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-between justify-content-left">
-                        <img src="${user.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
+                        <img src="${user.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${user.name}</h3>
                             <p class="card-text mb-1">${bio}</p>
@@ -128,7 +128,7 @@ function createCardUser(user){
         <div class="card custom-card-dark h-100">
             <div class="card-body">
                 <div class="d-flex align-items-between justify-content-left">
-                    <img src="${user.avatar_url}" class="col-3 col-md-2 me-3 user-profile">
+                    <img src="${user.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${user.name}</h3>
                         <p class="card-text mb-1">${bio}</p>
