@@ -203,12 +203,14 @@ function createCardUser(userJSON){
         `<div class="col-md-8 mx-auto">
             <div class="card custom-card-dark h-100">
                 <div class="card-body">
-                    <div class="d-flex align-items-between justify-content-left">
-                        <img src="${userJSON.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
+                    <div class="d-flex flex-wrap align-items-between justify-content-left">
+                        <img src="${userJSON.avatar_url}" class="col-4 col-sm-3 col-lg-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${userJSON.name}</h3>
                             <p class="card-text mb-1">${bio}</p>
-                            <a href="${userJSON.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Perfil</a>
+                            <div>
+                                <a href="${userJSON.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Perfil</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -223,12 +225,14 @@ function createCardUser(userJSON){
     `<div class="col-md-8 mx-auto">
         <div class="card custom-card-dark h-100">
             <div class="card-body">
-                <div class="d-flex align-items-between justify-content-left">
-                    <img src="${userJSON.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
+                <div class="d-flex flex-wrap align-items-between justify-content-left">
+                    <img src="${userJSON.avatar_url}" class="col-4 col-sm-3 col-lg-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${userJSON.name}</h3>
                         <p class="card-text mb-1">${bio}</p>
-                        <a href="${userJSON.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Profile</a>
+                        <div>
+                            <a href="${userJSON.html_url}" class="btn btn-primary mt-2"><i class="bi bi-github me-1"></i>Profile</a>
+                        </div>
                     </div>
                 </div>
             </div>

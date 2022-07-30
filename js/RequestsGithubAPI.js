@@ -41,7 +41,9 @@ function createCardRepository(repositories){
                     <div class="card-body d-flex align-items-between flex-column">
                         <h5 class="card-title">${repository.name}</h5>
                         <p class="card-text mb-auto">${description}</p>
-                        <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repositório</a>
+                        <div>
+                            <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repositório</a>
+                        </div>
                     </div>
                     <div class="card-footer custom-card-dark">
                         <small>Última atualização em ${dateDiffText}</small>
@@ -60,7 +62,9 @@ function createCardRepository(repositories){
                 <div class="card-body d-flex align-items-between flex-column">
                     <h5 class="card-title">${repository.name}</h5>
                     <p class="card-text mb-auto">${description}</p>
-                    <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repository</a>
+                    <div>
+                        <a href="${repository.html_url}" class="btn btn-primary mt-2"><i class="bi bi-folder2-open me-1"></i>Repository</a>
+                    </div>
                 </div>
                 <div class="card-footer custom-card-dark">
                    <small>Last updated on ${dateDiffText}</small>
@@ -107,8 +111,8 @@ function createCardUser(user){
         `<div class="col-md-8 mx-auto">
             <div class="card custom-card-dark h-100">
                 <div class="card-body">
-                    <div class="d-flex align-items-between justify-content-left">
-                        <img src="${user.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
+                    <div class="d-flex flex-wrap align-items-between justify-content-left">
+                        <img src="${user.avatar_url}" class="col-4 col-sm-3 col-lg-2 me-3 user-profile">
                         <div class="">
                             <h3 class="card-title">${user.name}</h3>
                             <p class="card-text mb-1">${bio}</p>
@@ -127,8 +131,8 @@ function createCardUser(user){
     `<div class="col-md-8 mx-auto">
         <div class="card custom-card-dark h-100">
             <div class="card-body">
-                <div class="d-flex align-items-between justify-content-left">
-                    <img src="${user.avatar_url}" class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
+                <div class="d-flex flex-wrap align-items-between justify-content-left">
+                    <img src="${user.avatar_url}" class="col-4 col-sm-3 col-lg-2 me-3 user-profile">
                     <div class="">
                         <h3 class="card-title">${user.name}</h3>
                         <p class="card-text mb-1">${bio}</p>
