@@ -33,6 +33,11 @@ footer{
     border-radius: 50%;
 }
 
+.utilities-icon{
+    height: 2.5em;
+    width: 2.5em;
+}
+
 .website-icon{
     height: 2em;
     width: 8em;
