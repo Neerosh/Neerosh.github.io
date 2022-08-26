@@ -17,7 +17,7 @@ function loadMenu(){
         menuLang = userLang;
     }
 
-    if (pageURI.includes('projects')){
+    if (pageURI.includes('/projects')){
         imageSRC ='../../images/NerroshSpace_LogoBlack.png';
     }
 
@@ -37,7 +37,7 @@ function loadMenu(){
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li>
-                                        <a class="dropdown-item" href="/pt-BR/projects/githubUserSearch"><i class="bi bi-github me-1"></i>Pesquisa de Usuários do Github</a>
+                                        <a class="dropdown-item" href="/pt-BR/projects/githubUserSearch"><i class="bi bi-github me-1"></i>Pesquisa de Usuários (Github)</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/pt-BR/projects/utilitiesTID"><i class="bi bi-tools me-1"></i>Utilidades TID</a>
