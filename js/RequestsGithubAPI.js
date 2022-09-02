@@ -1,18 +1,72 @@
 const rowCardsRepository = document.getElementById('RowCardsRepository');
 const rowCardUser = document.getElementById('RowCardUser');
+
+createPlaceholderCardUser();
+createPlaceholderCardsRepository();
+
 getRepositories();
 getUser();
 
 
 //functions
+
+function createPlaceholderCardUser(){
+    rowCardUser.removeAttribute('hidden');
+    rowCardUser.innerHTML = `
+    <div class="col-md-8 mx-auto" name="placeholderCardUser">
+        <div class="card custom-card-dark h-100">
+            <div class="card-body">
+                <div class="d-flex align-items-between justify-content-left">
+                    <rect class="col-5 col-sm-3 col-lg-2 me-3 user-profile" height="100%" width="100%"></rect>
+                    <div class="w-100">
+                        <h3 class="card-title placeholder-glow">
+                        <span class="placeholder col-8"></span>
+                        </h3>
+                        <p class="card-text mb-auto placeholder-glow">
+                        <span class="placeholder col-8"></span>
+                        <span class="placeholder col-8"></span>
+                        </p>
+                        <a href="#" class="btn btn-primary disabled mt-2 placeholder col-4"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+function createPlaceholderCardsRepository(){
+    rowCardsRepository.removeAttribute('hidden');
+    let placeholderCard = `
+    <div class="col-md-6 col-lg-4" name="placeholderCardsRepository">
+        <div class="card custom-card-dark h-100">
+            <div class="card-body d-flex align-items-between flex-column">
+                <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+                </h5>
+                <p class="card-text mb-auto placeholder-glow">
+                <span class="placeholder col-12"></span>
+                <span class="placeholder col-12"></span>
+                </p>
+                <a href="#" class="btn btn-primary disabled mt-2 placeholder col-4"></a>
+            </div>
+            <div class="card-footer placeholder-glow">
+                <small class="placeholder col-12"></small>
+            </div>
+        </div>
+    </div>`;
+
+    for (let i = 0; i < 9; i++){
+        rowCardsRepository.innerHTML += placeholderCard
+    }
+}
+
 async function getRepositories(){
     const request = 'https://api.github.com/users/Neerosh/repos'
     const response = await fetch(request);
     const repositoriesJSON = await response.json();
     //console.log(respData);
+    cleanPlaceholderCardsRepository();
     if (repositoriesJSON != undefined && repositoriesJSON != null){
         createCardRepository(repositoriesJSON);
-        cleanPlaceholderCardsRepository();
     }
 }
 function createCardRepository(repositories){
@@ -90,9 +144,9 @@ async function getUser(){
     const response = await fetch(request);
     const userJSON = await response.json();
     //console.log(respData);
+    cleanPlaceholderCardUser();
     if (userJSON != undefined && userJSON != null){
         createCardUser(userJSON);
-        cleanPlaceholderCardUser();
     }
 }
 function createCardUser(user){

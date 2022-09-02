@@ -1,4 +1,3 @@
-//let userLang = document.documentElement.getAttribute('lang');
 const rowCardsRepository = document.getElementById('RowCardsRepository');
 const rowCardUser = document.getElementById('RowCardUser');
 const searchButton = document.getElementById('ButtonSearch');
@@ -50,7 +49,7 @@ function createPlaceholderCardUser(){
         <div class="card custom-card-dark h-100">
             <div class="card-body">
                 <div class="d-flex align-items-between justify-content-left">
-                    <img class="col-5 col-sm-3 col-lg-2 me-3 user-profile">
+                    <rect class="col-5 col-sm-3 col-lg-2 me-3 user-profile" height="100%" width="100%"></rect>
                     <div class="w-100">
                         <h3 class="card-title placeholder-glow">
                         <span class="placeholder col-8"></span>
